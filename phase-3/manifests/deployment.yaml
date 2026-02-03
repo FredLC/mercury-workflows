@@ -26,6 +26,19 @@ spec:
         - containerPort: 5678
           protocol: TCP
 
+        env:
+          - name: N8N_ENCRYPTION_KEY
+            valueFrom:
+              secretKeyRef:
+                name: n8n-key
+                key: encryption-key
+
+          - name: DB_POSTGRESDB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: db-password
+                key: db-password
+
         envFrom:
           - configMapRef:
               name: n8n-configmap
