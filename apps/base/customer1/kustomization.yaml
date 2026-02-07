@@ -11,4 +11,4 @@ resources:
   - service.yaml
   - ingress.yaml
   - objectstore.yaml
-  # - scheduled-backup.yaml
+  - scheduled-backup.yaml
