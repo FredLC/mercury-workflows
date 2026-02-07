@@ -9,7 +9,14 @@ patches:
     patch: |-
       - op: replace
         path: /spec/parameters/userAssignedIdentityID
-        value: "1c6d3cfd-4fb1-483d-9f97-8b4ff902a073"
+        value: "c728d9de-21a6-4f0b-8c1c-00c12147e8bb"
       - op: replace
         path: /spec/parameters/tenantId
         value: "3af986a9-762c-4c6c-91bb-7ab4916cb7d0"
+  - target:
+      kind: ObjectStore
+      name: customer1-objectstore
+    patch: |-
+      - op: replace
+        path: /spec/configuration/destinationPath
+        value: "https://mercurybackupsfredlc.blob.core.windows.net/customer1"
