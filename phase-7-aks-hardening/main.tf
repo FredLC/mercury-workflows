@@ -136,14 +136,14 @@ resource "azurerm_kubernetes_flux_configuration" "main" {
 
   kustomizations {
     name                       = "infra-controllers"
-    path                       = "./phase-7-aks-hardening/gitops/infrastructure/controllers/staging"
+    path                       = "./phase-8-production-n8n/gitops/infrastructure/controllers/staging"
     sync_interval_in_seconds   = 300
     garbage_collection_enabled = true
   }
 
   kustomizations {
     name                       = "infra-configs"
-    path                       = "./phase-7-aks-hardening/gitops/infrastructure/configs/staging"
+    path                       = "./phase-8-production-n8n/gitops/infrastructure/configs/staging"
     sync_interval_in_seconds   = 300
     depends_on                 = ["infra-controllers"]
     garbage_collection_enabled = true
@@ -151,7 +151,7 @@ resource "azurerm_kubernetes_flux_configuration" "main" {
 
   kustomizations {
     name                       = "apps"
-    path                       = "./phase-7-aks-hardening/gitops/apps/staging"
+    path                       = "./phase-8-production-n8n/gitops/apps/staging"
     sync_interval_in_seconds   = 300
     depends_on                 = ["infra-configs"]
     garbage_collection_enabled = true
