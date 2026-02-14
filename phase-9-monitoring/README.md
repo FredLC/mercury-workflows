@@ -45,7 +45,7 @@ This phase adds end-to-end application monitoring with Telegram notifications.
 
 ```bash
 # Set variables
-KEY_VAULT_NAME="kv-mercury-staging"
+KEY_VAULT_NAME="kv-mercury-staging-fl"
 BOT_TOKEN="8556621399:AAEhcYNniyBg33BKqVS3-AAbQ9BC1M_aSjs"  # From BotFather
 CHAT_ID="6871863215"  # From getUpdates (use quotes for negative numbers)
 
