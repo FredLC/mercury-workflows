@@ -13,7 +13,7 @@ patches:
     patch: |-
       - op: replace
         path: /spec/parameters/userAssignedIdentityID
-        value: "ac9bb7e1-d975-415c-aeae-1a0e7ba4e163"
+        value: "dc6c46dd-3f38-4609-9967-221f51111bf8"
       - op: replace
         path: /spec/parameters/keyvaultName
         value: "kv-mercury-prod-fl"
