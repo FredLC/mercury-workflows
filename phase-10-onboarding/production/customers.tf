@@ -9,7 +9,7 @@ locals {
 
   environment      = "production"
   domain           = "mercury-prod.fredericlefebvrecote.com"
-  gitops_repo_path = "~/mercury-workflows/phase-10-onboarding/gitops"
+  gitops_repo_path = "/Users/fred/mercury-gitops"
 
   customers_sorted = sort(tolist(local.customers))
 }

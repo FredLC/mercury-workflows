@@ -121,11 +121,11 @@ resource "azurerm_kubernetes_flux_configuration" "main" {
   namespace  = "flux-system"
 
   git_repository {
-    url             = "ssh://git@github.com/FredLC/mercury-workflows"
+    url             = "ssh://git@github.com/FredLC/mercury-gitops"
     reference_type  = "branch"
     reference_value = "main"
 
-    ssh_private_key_base64 = base64encode(file("~/.ssh/mercury"))
+    ssh_private_key_base64 = base64encode(file("~/.ssh/mercury-gitops"))
   }
 
   # Production uses production paths in GitOps repo
